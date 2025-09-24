@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GurujiTech Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        .section-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+        .animated-element {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .cta-button {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1c1c1c 0%, #282828 100%);
+        }
+        .card {
+            background-color: rgba(40, 40, 40, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#282828] bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#hero" class="flex items-center space-x-2">
+                <img src="uploaded:cropped-Guruji-Tech-Solutions-logo-300x205.png-3a148802-d392-4922-9e17-a9160a8b1ada" alt="GurujiTech Solutions Logo" class="logo-img">
+                <span class="text-xl md:text-2xl font-bold text-[#FFC107] hidden md:block">GurujiTech Solutions</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-gray-300">
+                <a href="#hero" class="hover:text-[#003366] transition-colors">Home</a>
+                <a href="#about-us" class="hover:text-[#003366] transition-colors">About Us</a>
+                <a href="#why-us" class="hover:text-[#003366] transition-colors">Why Us?</a>
+                <a href="#courses" class="hover:text-[#003366] transition-colors">Courses</a>
+                <a href="#team" class="hover:text-[#003366] transition-colors">Our Team</a>
+                <a href="#placements" class="hover:text-[#003366] transition-colors">Placements</a>
+                <a href="#contact" class="hover:text-[#003366] transition-colors">Contact</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-300 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[#282828] z-40 md:hidden flex flex-col items-center justify-center space-y-8 text-xl">
+        <button id="close-menu" class="absolute top-4 right-4 text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        <a href="#hero" class="text-white hover:text-[#003366]">Home</a>
+        <a href="#about-us" class="text-white hover:text-[#003366]">About Us</a>
+        <a href="#why-us" class="text-white hover:text-[#003366]">Why Us?</a>
+        <a href="#courses" class="text-white hover:text-[#003366]">Courses</a>
+        <a href="#team" class="text-white hover:text-[#003366]">Our Team</a>
+        <a href="#placements" class="text-white hover:text-[#003366]">Placements</a>
+        <a href="#contact" class="text-white hover:text-[#003366]">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section-container bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/1c1c1c/282828?text=SAP+Professional+Training');">
+        <div class="max-w-4xl text-center animated-element bg-black bg-opacity-50 p-8 rounded-xl shadow-xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#003366] mb-4 drop-shadow-lg">Become a Certified SAP Professional</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                We provide hands-on, live-project based training in cutting-edge technologies to launch your career.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#courses" class="cta-button inline-block bg-[#003366] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#002244] transform transition-transform">
+                    View Courses
+                </a>
+                <a href="#contact" class="cta-button inline-block bg-[#FFC107] text-black font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#E6B800] transform transition-transform">
+                    Enroll Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="section-container card">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] mb-12 animated-element">About GurujiTech Solutions</h2>
+            <div class="text-lg text-gray-300 max-w-4xl mx-auto text-left animated-element">
+                <p class="mb-4">At GurujiTech Solutions, we are dedicated to bridging the gap between academic knowledge and industry demands. Our mission is to empower individuals with the practical skills needed to thrive in the modern tech landscape. We believe in a "learning by doing" philosophy, which is why our curriculum is designed by industry experts with over 10 years of experience.</p>
+                <p>We provide a unique blend of practical and theoretical learning, offering hands-on labs, live projects, and personalized mentorship. Our goal is not just to provide training, but to ensure our students are job-ready and confident in their abilities. We are committed to your success from the first day of class to your final placement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section-container">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] mb-12 animated-element">Why GurujiTech?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <div class="mb-4 text-5xl text-[#FFC107]">🧑‍💻</div>
+                    <h3 class="text-2xl font-bold mb-2 text-[#003366]">Job Ready Training</h3>
+                    <p class="text-gray-300">Practical and hands-on training tailored for the modern job market.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <div class="mb-4 text-5xl text-[#FFC107]">⏰</div>
+                    <h3 class="text-2xl font-bold mb-2 text-[#003366]">Flexible Batches</h3>
+                    <p class="text-gray-300">Choose a schedule that fits your life with our flexible training batches.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <div class="mb-4 text-5xl text-[#FFC107]">📈</div>
+                    <h3 class="text-2xl font-bold mb-2 text-[#003366]">Live Projects</h3>
+                    <p class="text-gray-300">Work on live projects to build a strong portfolio and real-world experience.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <div class="mb-4 text-5xl text-[#FFC107]">🤝</div>
+                    <h3 class="text-2xl font-bold mb-2 text-[#003366]">Placement Support</h3>
+                    <p class="text-gray-300">We provide dedicated support to help you secure your dream job.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="section-container card">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] mb-12 animated-element">Our Instructors and Students</h2>
+            <div class="bg-[#282828] rounded-lg shadow-lg animated-element">
+                <img src="https://storage.googleapis.com/g.co/immersive_files/1000175198.jpg" alt="A teacher and students from GurujiTech Solutions" class="w-full h-auto rounded-t-lg">
+                <div class="p-6 text-left">
+                    <h3 class="text-2xl font-bold text-[#FFC107] mb-2">Meet Our Family</h3>
+                    <p class="text-gray-300">
+                        At GurujiTech Solutions, our dedicated instructors guide students through comprehensive, hands-on training, fostering a collaborative learning environment. This photo captures the spirit of our community—passionate, engaged, and ready to succeed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section-container">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] mb-12 animated-element">Our Courses</h2>
+            <p class="text-gray-300 text-lg mb-8">Choose from our specialized training programs to kickstart your career.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Core Modules -->
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">SAP FICO</h3>
+                    <p class="text-gray-300">Master Finance and Controlling modules to manage financial accounting and cost management with expertise.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">SAP MM</h3>
+                    <p class="text-gray-300">Learn Material Management to handle a company's procurement, inventory, and material needs.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">SAP ABAP</h3>
+                    <p class="text-gray-300">Become a skilled SAP developer with our training in Advanced Business Application Programming.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">SAP SD</h3>
+                    <p class="text-gray-300">Get hands-on experience in Sales and Distribution to manage order-to-cash processes.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">SAP HCM</h3>
+                    <p class="text-gray-300">Train in Human Capital Management to streamline HR processes and people management.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">SAP S/4 HANA</h3>
+                    <p class="text-gray-300">Future-proof your career with training in SAP's latest business suite for enterprise management.</p>
+                </div>
+                <!-- Other Tech Courses -->
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Cloud Computing (AWS & Azure)</h3>
+                    <p class="text-gray-300">Explore cloud technologies like AWS and Azure to manage and deploy applications in the cloud.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">AI & Machine Learning</h3>
+                    <p class="text-gray-300">Dive into the world of AI and machine learning with practical, hands-on training for cutting-edge projects.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Data Engineering</h3>
+                    <p class="text-gray-300">Learn to build and manage data pipelines and infrastructure with our expert-led data engineering course.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Python</h3>
+                    <p class="text-gray-300">Master one of the most versatile programming languages for data science, web development, and automation.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Java</h3>
+                    <p class="text-gray-300">Learn the fundamentals of Java and build scalable applications and enterprise solutions.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">C++</h3>
+                    <p class="text-gray-300">Get a solid foundation in C++ for building high-performance applications, games, and systems.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">.NET</h3>
+                    <p class="text-gray-300">Develop robust web applications and services using Microsoft's .NET framework.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Oracle</h3>
+                    <p class="text-gray-300">Become a database expert with our comprehensive training in Oracle database management and administration.</p>
+                </div>
+                <!-- Office and Tally -->
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Tally</h3>
+                    <p class="text-gray-300">Master Tally for accounting, finance, and inventory management for businesses of all sizes.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">MS Office Suite</h3>
+                    <p class="text-gray-300">Enhance your professional productivity with our training in Word, Excel, PowerPoint, and other office tools.</p>
+                </div>
+                <!-- Other Courses -->
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Other Courses</h3>
+                    <p class="text-gray-300">Contact us to learn about our full range of courses in emerging technologies and professional skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Training Methodology Section -->
+    <section id="methodology" class="section-container card">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] mb-12 animated-element">Our Training Methodology</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animated-element">
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg text-left">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">A Practical and Hands-On Approach</h3>
+                    <p class="text-gray-300">Our courses are built on a "learning by doing" philosophy. We believe the best way to master a skill is by applying it. Our curriculum is packed with hands-on labs, real-world case studies, and live projects that mirror actual industry scenarios. This ensures you're not just memorizing concepts, but gaining practical experience that makes you job-ready from day one.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg text-left">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Expert-Led and Industry-Focused</h3>
+                    <p class="text-gray-300">All our instructors are industry experts with over a decade of experience in their respective fields. They bring valuable real-world insights and best practices into every lesson. Our course content is constantly updated to align with the latest trends and demands of the tech industry, ensuring you are learning the most relevant and valuable skills for your career.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section id="certifications" class="section-container">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] mb-12 animated-element">Official Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <div class="mb-4 text-5xl text-[#FFC107]">📜</div>
+                    <h3 class="text-2xl font-bold mb-2 text-[#003366]">Industry-Recognized</h3>
+                    <p class="text-gray-300">Our courses prepare you for official SAP certifications that are globally recognized.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <div class="mb-4 text-5xl text-[#FFC107]">🚀</div>
+                    <h3 class="text-2xl font-bold mb-2 text-[#003366]">Career Advancement</h3>
+                    <p class="text-gray-300">A certification proves your expertise and accelerates your career growth in the SAP ecosystem.</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg animated-element">
+                    <div class="mb-4 text-5xl text-[#FFC107]">📚</div>
+                    <h3 class="text-2xl font-bold mb-2 text-[#003366]">Comprehensive Training</h3>
+                    <p class="text-gray-300">We cover all the topics needed to pass the certification exams with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placements Section -->
+    <section id="placements" class="section-container card">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] mb-12 animated-element">Our Placement Success Stories</h2>
+            <p class="text-gray-300 text-lg mb-8">We are proud of our students who have secured jobs at leading companies.</p>
+            <div class="flex flex-wrap items-center justify-center gap-8 animated-element">
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg text-left w-full md:w-1/2 lg:w-1/4">
+                    <h4 class="text-xl font-bold text-[#FFC107]">Rahul Sharma</h4>
+                    <p class="text-gray-300">Placed at **Deloitte**</p>
+                    <p class="text-sm italic mt-2 text-gray-400">"The support from GurujiTech was instrumental in my placement."</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg text-left w-full md:w-1/2 lg:w-1/4">
+                    <h4 class="text-xl font-bold text-[#FFC107]">Priya Singh</h4>
+                    <p class="text-gray-300">Placed at **Capgemini**</p>
+                    <p class="text-sm italic mt-2 text-gray-400">"The live projects gave me the confidence to ace my interviews."</p>
+                </div>
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg text-left w-full md:w-1/2 lg:w-1/4">
+                    <h4 class="text-xl font-bold text-[#FFC107]">Amit Kumar</h4>
+                    <p class="text-gray-300">Placed at **Cognizant**</p>
+                    <p class="text-sm italic mt-2 text-gray-400">"The flexible batches allowed me to train while working. A great experience."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] mb-8 animated-element">Visit Our Locations & Get in Touch</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 animated-element">
+                <!-- Campus Location -->
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg text-left">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Our Campus</h3>
+                    <p class="text-gray-300 mb-2">📞 +91 8669008679</p>
+                    <p class="text-gray-300 mb-2">📞 +91 8293051993</p>
+                    <p class="text-gray-300 mb-2">📍 C972+74V Guruji Tech SOLUTIONS, Srirampur Rd, North Srirampur, Nabadwip, Srirampur, West Bengal 713513</p>
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold mb-4 text-[#FFC107]">Find Us on Google Maps</h3>
+                        <div class="rounded-lg overflow-hidden w-full h-80 shadow-lg">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.124637172023!2d88.37563171496188!3d22.75549068514101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f899011756209b%3A0xc3b51614e59103c8!2sGuruji%20Tech%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1625908027151!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                        <a
+                            href="https://maps.google.com/?q=C972+74V+Guruji+Tech+SOLUTIONS"
+                            target="_blank"
+                            class="inline-flex items-center mt-4 text-[#FFC107] hover:underline transition-colors"
+                        >
+                            View Larger Map
+                        </a>
+                    </div>
+                </div>
+                <!-- Office Location -->
+                <div class="p-6 bg-[#282828] rounded-lg shadow-lg text-left">
+                    <h3 class="text-2xl font-bold mb-2 text-[#FFC107]">Our Office</h3>
+                    <p class="text-gray-300 mb-2">📞 +91 8669008679</p>
+                    <p class="text-gray-300 mb-2">📞 +91 8293051993</p>
+                    <p class="text-gray-300 mb-2">📍 C956+RW8 Guruji Tech SOLUTIONS Office, 79/1, Sarkarpara Bypass Rd, Nabadwip, West Bengal 741302</p>
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold mb-4 text-[#FFC107]">Find Us on Google Maps</h3>
+                        <div class="rounded-lg overflow-hidden w-full h-80 shadow-lg">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.124637172023!2d88.37563171496188!3d22.75549068514101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f899011756209b%3A0xc3b51614e59103c8!2sGuruji%20Tech%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1625908027151!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                        <a
+                            href="https://maps.google.com/?q=C956+RW8+Guruji+Tech+SOLUTIONS+Office"
+                            target="_blank"
+                            class="inline-flex items-center mt-4 text-[#FFC107] hover:underline transition-colors"
+                        >
+                            View Larger Map
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div class="mt-8 lg:mt-16 w-full max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-[#FFC107] mb-4">Send a Message</h3>
+                <form class="p-6 bg-[#282828] rounded-lg shadow-lg space-y-4 animated-element">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-[#1c1c1c] text-gray-300 border border-[#003366] focus:outline-none focus:border-[#FFC107]">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-[#1c1c1c] text-gray-300 border border-[#003366] focus:outline-none focus:border-[#FFC107]">
+                    <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg bg-[#1c1c1c] text-gray-300 border border-[#003366] focus:outline-none focus:border-[#FFC107]"></textarea>
+                    <button type="submit" class="w-full cta-button bg-[#003366] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#002244] transform transition-transform">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-gray-400">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://www.linkedin.com/company/guruji-tech-solutions" target="_blank" class="hover:text-[#FFC107] transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm1.5-11.385c-.975 0-1.5-.75-1.5-1.667s.75-1.667 1.5-1.667c.833 0 1.5.75 1.5 1.667s-.667 1.667-1.5 1.667zm12.5 11.385h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.168-1.921 4.386-2.035 5.253.791 0 0 2.747-2.607 2.747-2.709z"/>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/gurujitechsolutions" target="_blank" class="hover:text-[#FFC107] transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.996c0-1.54 0-1.85 1.529-1.85h2.971v-4h-4.5c-2.705 0-4.5 1.76-4.5 4.5v2.5z"/>
+                </svg>
+            </a>
+            <a href="https://www.youtube.com/@gurujitechsolutions" target="_blank" class="hover:text-[#FFC107] transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19.615 10.74c.189-.861.304-1.782.342-2.749.034-.848-.052-1.701-.252-2.522-.249-.988-.636-1.917-1.154-2.756-.518-.839-1.116-1.597-1.802-2.24-.687-.643-1.428-1.171-2.253-1.579-.824-.408-1.684-.664-2.524-.763-.84-.099-1.72-.078-2.614-.035-1.808.118-3.518.529-5.074 1.258-1.556.729-2.923 1.689-4.103 2.87-1.18 1.181-2.14 2.548-2.87 4.104-.729 1.556-1.139 3.266-1.257 5.074-.043.894-.064 1.774.035 2.614.099.84.355 1.699.763 2.524.408.825.936 1.566 1.579 2.253.643.687 1.401 1.285 2.24 1.802 1.096.678 2.308 1.149 3.595 1.411 1.287.262 2.6.242 3.864.12 1.353-.133 2.65-.436 3.896-.909 1.246-.472 2.404-1.109 3.46-1.899 1.056-.789 2.016-1.756 2.836-2.836.82-1.08 1.488-2.27 2.004-3.559.516-1.289.79-2.678.8-4.077zm-8.615 8.261l-5.615-3.321v6.643l5.615-3.322z"/>
+                </svg>
+            </a>
+        </div>
+        <p>&copy; 2024 GurujiTech Solutions. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animated-element').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenu = document.getElementById('close-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
